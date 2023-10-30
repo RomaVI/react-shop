@@ -1,7 +1,7 @@
 export const ItemListCointainer = (props) => {
-    return <div>{props.gretting}</div>;
+    return <h2>{props.greeting}</h2>;
 };
 
-const gretting = () => {
-    return <h2>Hola Mundo</h2>;
-};
+//const greeting = () => {
+//    return <h2>Hola Mundo</h2>;
+//};
