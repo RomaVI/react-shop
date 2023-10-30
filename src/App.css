@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: white;
+  border: none;
+  text-decoration: none;
+  font-family: 'Segoe Script', cursive;
+
+}
+
+i {
+  color: white;
+}
+
+h1 {
+  display: flex;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Segoe Script', cursive;
+}
+
+.headerPrincipal {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-1rem);
+  width: 100vw;
+  height: 10vh;
+
+  .menuAndLogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 16vw;
+    height: 10vh;
+    margin-left: 2vw;
+
+    .botonHamburguesa2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3vh;
+      width: 3vw;
+      height: 4vh;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      border-radius: 100%;
+      font-weight: 600;
+    }
+
+    .botonHamburguesa2:hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: rgba(84, 83, 83, 0.717);
+      border-radius: 100%;
+      width: 3vw;
+      height: 6vh;
+
+    }
+
+    .botonHamburguesa2:active {
+      border: 1px solid white;
+    }
+
+    .logoAndTitle {
+      display: flex;
+
+      .logo {
+        height: 7vh;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+.headerPlegable {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  top: 0;
+  margin-left: -20vw;
+  width: 19.5vw;
+  height: 100vh;
+  .menuAndLogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 16vw;
+    height: 10vh;
+    margin-left: 2vw;
+
+    .botonHamburguesa {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3vh;
+      width: 3vw;
+      height: 4vh;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      border-radius: 100%;
+      font-weight: 600;
+    }
+
+    .botonHamburguesa:hover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: rgba(84, 83, 83, 0.717);
+      border-radius: 100%;
+      width: 3vw;
+      height: 6vh;
+
+    }
+
+    .botonHamburguesa:active {
+      border: 1px solid white;
+    }
+
+    .logoAndTitle {
+      display: flex;
+
+      .logo {
+        height: 7vh;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border: none;
+    height: 90vh;
+
+    .contUl {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 5rem;
+      list-style: none;
+
+    .liColor{
+      margin-right: 2rem;
+      color: rgb(2, 170, 216);
+      cursor: pointer;
+    }
+    
+  }
+}
+}
+.logo:hover {
+  height: 7vh;
+  cursor: pointer;
+  filter: drop-shadow(0px 5px 10px rgb(6, 116, 199));
+}
+.liEstetic{
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  width: 14vw;
+  height: 2vw;
+  
+}
+
+.liEstetic:hover{
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  transition: transform 3s ease;
+}
+
+.headerPlegable.active {
+  transform: translateX(calc(20vw - 1rem));
+  transition: transform 1s ease;
+}
+
+
+#search {
+  margin-right: 35vw;
+  width: 30vw;
+  height: 4.5vh;
+  border-radius: 10px;
+
+  font-size: 1.2rem;
+}
