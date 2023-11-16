@@ -1,238 +1,238 @@
 body {
-  margin: 0;
-  background-color: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }
 
 a,
 p {
-  color: white;
-  border: none;
-  text-decoration: none;
-  font-family: 'Segoe Script', cursive;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-family: 'Segoe Script', cursive;
 
 }
 
 i {
-  color: white;
+    color: white;
 }
 
 h1 {
-  display: flex;
-  color: white;
-  font-size: 1rem;
-  font-family: 'Segoe Script', cursive;
+    display: flex;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Segoe Script', cursive;
 }
 
 h2 {
-  color: white;
-  display: flex;
-  margin-left: 15vw;
+    color: white;
+    display: flex;
+    margin-left: 15vw;
 }
 
 .headerPrincipal {
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-  align-items: center;
-  transform: translateX(-1rem);
-  width: 100vw;
-  height: 10vh;
-
-  .menuAndLogo {
     display: flex;
+    flex-direction: row;
+
     justify-content: space-between;
     align-items: center;
-    width: 16vw;
+    transform: translateX(-1rem);
+    width: 100vw;
     height: 10vh;
-    margin-left: 2vw;
 
-    .botonHamburguesa2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 3vh;
-      width: 3vw;
-      height: 4vh;
-      color: white;
-      cursor: pointer;
-      background-color: transparent;
-      border-radius: 100%;
-      font-weight: 600;
+    .menuAndLogo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 16vw;
+        height: 10vh;
+        margin-left: 2vw;
+
+        .botonHamburguesa2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3vh;
+            width: 3vw;
+            height: 4vh;
+            color: white;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 100%;
+            font-weight: 600;
+        }
+
+        .botonHamburguesa2:hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgba(84, 83, 83, 0.307);
+            border-radius: 100%;
+            width: 3vw;
+            height: 6vh;
+
+        }
+
+        .botonHamburguesa2:active {
+            border: 1px solid white;
+        }
+
+        .logoAndTitle {
+            display: flex;
+
+            .logo {
+                height: 7vh;
+                cursor: pointer;
+            }
+        }
     }
-
-    .botonHamburguesa2:hover {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background-color: rgba(84, 83, 83, 0.307);
-      border-radius: 100%;
-      width: 3vw;
-      height: 6vh;
-
-    }
-
-    .botonHamburguesa2:active {
-      border: 1px solid white;
-    }
-
-    .logoAndTitle {
-      display: flex;
-
-      .logo {
-        height: 7vh;
-        cursor: pointer;
-      }
-    }
-  }
 }
 
 
 .headerPlegable {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-
-  top: 0;
-  margin-left: -20vw;
-  width: 19.5vw;
-  height: 100vh;
-
-  .menuAndLogo {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 16vw;
-    height: 10vh;
-    margin-left: 2vw;
+    flex-direction: column;
 
-    .botonHamburguesa {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 3vh;
-      width: 3vw;
-      height: 4vh;
-      color: white;
-      cursor: pointer;
-      background-color: transparent;
-      border-radius: 100%;
-      font-weight: 600;
-    }
+    top: 0;
+    margin-left: -20vw;
+    width: 19.5vw;
+    height: 100vh;
 
-    .botonHamburguesa:hover {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .menuAndLogo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 16vw;
+        height: 10vh;
+        margin-left: 2vw;
 
-      background-color: rgba(84, 83, 83, 0.276);
-      border-radius: 100%;
-      width: 3vw;
-      height: 6vh;
-
-    }
-
-    .botonHamburguesa:active {
-      border: 1px solid white;
-    }
-
-    .logoAndTitle {
-      display: flex;
-
-      .logo {
-        height: 7vh;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .navCont {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    border: none;
-    height: 90vh;
-
-    .contUl {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-bottom: 5rem;
-      list-style: none;
-
-      .liColor {
-        font-size: 1.4rem;
-        height: 1.5rem;
-        margin-right: 2rem;
-        color: rgb(2, 170, 216);
-        cursor: pointer;
-        text-shadow: 0px 0px 1rem rgb(7, 107, 118);
-
-        .textShadow {
-          filter: 'drop-shadow(0px 0px 1rem rgba(7, 107, 118, 0.8))'
+        .botonHamburguesa {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3vh;
+            width: 3vw;
+            height: 4vh;
+            color: white;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 100%;
+            font-weight: 600;
         }
-      }
 
+        .botonHamburguesa:hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgba(84, 83, 83, 0.276);
+            border-radius: 100%;
+            width: 3vw;
+            height: 6vh;
+
+        }
+
+        .botonHamburguesa:active {
+            border: 1px solid white;
+        }
+
+        .logoAndTitle {
+            display: flex;
+
+            .logo {
+                height: 7vh;
+                cursor: pointer;
+            }
+        }
     }
-  }
+
+    .navCont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        border: none;
+        height: 90vh;
+
+        .contUl {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 5rem;
+            list-style: none;
+
+            .liColor {
+                font-size: 1.4rem;
+                height: 1.5rem;
+                margin-right: 2rem;
+                color: rgb(2, 170, 216);
+                cursor: pointer;
+                text-shadow: 0px 0px 1rem rgb(7, 107, 118);
+
+                .textShadow {
+                    filter: 'drop-shadow(0px 0px 1rem rgba(7, 107, 118, 0.8))'
+                }
+            }
+
+        }
+    }
 
 }
 
 .logo:hover {
-  height: 7vh;
-  cursor: pointer;
-  filter: drop-shadow(0px 5px 10px rgb(6, 116, 199));
+    height: 7vh;
+    cursor: pointer;
+    filter: drop-shadow(0px 5px 10px rgb(6, 116, 199));
 }
 
 .liEstetic {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  width: 14vw;
-  height: 2vw;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    width: 14vw;
+    height: 2vw;
 
 }
 
 .liEstetic:hover {
-  background-color: rgba(71, 59, 59, 0.247);
-  border-radius: 5px;
-  transform: translateX(0.5rem);
+    background-color: rgba(71, 59, 59, 0.247);
+    border-radius: 5px;
+    transform: translateX(0.5rem);
 
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 
 }
 
 .liEstetic:active {
 
-  & a {
-    color: red;
-  }
+    & a {
+        color: red;
+    }
 }
 
 .headerPlegable.active {
-  transform: translateX(calc(20vw - 1rem));
-  transition: transform 1s ease;
+    transform: translateX(calc(20vw - 1rem));
+    transition: transform 1s ease;
 }
 
 
 #search {
-  margin-right: 35vw;
-  width: 25vw;
-  height: 3.5vh;
-  border-radius: 10px;
+    margin-right: 35vw;
+    width: 25vw;
+    height: 3.5vh;
+    border-radius: 10px;
 
-  font-size: 1rem;
-  padding-left: 0.5rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
 }

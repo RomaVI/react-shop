@@ -11,7 +11,7 @@ import { useState } from 'react';
 import { CardWidget } from '../components/CartWidget';
 //import { ItemListContainer } from '../components/ItemListContainer'
 
-import { products } from '../components/data/products';
+import { products } from '../data/products';
 
 const category = products.map((item) => item.category);
 const uniqueCategories = new Set(category)
