@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { NavBar } from './components/NavBar.jsx';
 import { ItemListCointainer } from './components/ItemListContainer.jsx';
+import { ItemDetailsContainer } from './components/ItemDetailsContainer.jsx';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
     <Routes>
         <Route path="/" element={<ItemListCointainer/>} />
         <Route path="/Categoria/:id" element={<ItemListCointainer/>} />
-        <Route path="/item/:id" element={<p>🐟</p>} />
+        <Route path="/item/:id" element={<ItemDetailsContainer/>} />
         <Route path="*" element={<p>Error 404</p>} />
       </Routes>
     </Router>
