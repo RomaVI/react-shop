@@ -295,3 +295,19 @@ h2 {
     background-color: rgba(82, 58, 58, 0.4);
     transform: translateY(-7vh) ;
 }
+
+.itemSBLOQUE{
+    width: 70vw;
+    margin-left: 18vw;
+    margin-right: 12vw;
+    .itemSTitle{
+        font-size: 3rem;
+        transform: translateY(-7vh);
+    }
+    .itemSPicture{
+        transform: translateY(-7vh);
+    }
+    .ItemSDescription{
+        height: 20vh;
+    }
+}

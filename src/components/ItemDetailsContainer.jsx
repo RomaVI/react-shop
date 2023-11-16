@@ -27,9 +27,9 @@ export const ItemDetailsContainer = () => {
 
 
     return (
-        <div>
-            <h2>{item.title}</h2> 
-            <img src={item.pictureUrl} />
-            <p>{item.descriptiom}</p>
+        <div className="itemSBLOQUE">
+            <h2 className="itemSTitle">{item.title}</h2> 
+            <img className="itemSPicture" src={item.pictureUrl} />
+            <p className="ItemSDescription">{item.descriptiom}</p>
         </div>);
 };
