@@ -36,7 +36,7 @@ h1 {
 h2 {
     color: white;
     display: flex;
-    margin-left: 15vw;
+    margin-left: 3vw;
 }
 
 .headerPrincipal {
@@ -235,4 +235,63 @@ h2 {
 
     font-size: 1rem;
     padding-left: 0.5rem;
+}
+
+
+
+
+
+.blockCont{
+    width: 19vw;
+    margin-top: 3vh;
+    margin-left: 1vw;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgba(104, 77, 77, 0.47);
+    border: 1px solid white;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    overflow: hidden;
+    .itemImg{
+        width: 19vw;
+        height: 30vw;
+    }
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.cardBockItem{
+    margin-left: 16.5vw;
+}
+.textSup{
+    height: 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.5vw;
+}
+.textInf{
+    font-size: 0.9rem;
+    margin: 0.5vw;
+}
+.botonItem{
+    background-color: rgba(245, 245, 220, 0);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-body{
+    z-index: 9900;
+    width: 19vw;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    background-color: rgba(82, 58, 58, 0.4);
+    transform: translateY(-7vh) ;
 }

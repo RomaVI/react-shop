@@ -21,7 +21,7 @@ export const ItemListCointainer = () => {
         .finally(() => {setLoading(false);});
     }, []);
     return (
-        <Container className="mt-4">
+        <Container className="cardBockItem">
             <h2>Lista</h2>
             <ItemList items={items}/>
         </Container>

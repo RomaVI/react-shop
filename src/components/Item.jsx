@@ -1,21 +1,21 @@
-import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 
+import Container from "react-bootstrap/Container";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
 export const Item = ({ item }) => {
     return (
-        <Container className="mt-4">
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+        <Container className=" blockCont">
+            <Card >
+                <Card.Img  className="itemImg" variant="top" src={item.pictureUrl} />
+                <Card.Body className="superior">
+                    <Card className="textSup">
+                        <Card.Title>{item.title}</Card.Title>
+                    <Link to={`/item/${item}`}> <Button className="botonItem">CHF   {item.price.toFixed(2)}</Button></Link>
+                    </Card>
+                    <Card.Text className="textInf">{item.descriptiom}</Card.Text>
                 </Card.Body>
             </Card>
         </Container>
