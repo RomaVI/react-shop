@@ -58,7 +58,7 @@ export const NavBar = () => {
                 <nav className="navCont">
                     <ul className="contUl">
                         <li className="liEstetic">
-                            <NavLink to={'/Categoria/DamiselaAzul'}>
+                            <NavLink to="/">
                             <i className="liColor"><GiIsland /></i>
                             <a href="#">Inicio</a>
                             </NavLink>
@@ -66,7 +66,7 @@ export const NavBar = () => {
                         <li className="liEstetic">
                             <NavLink to={'/Categoria/MisCompras'}>
                             <i className="liColor"><BiSolidShoppingBag/></i>
-                            <a href="#">Mis Compras</a>
+                            <a >Mis Compras</a>
                             </NavLink>
                         </li>
                         {[...uniqueCategories].map((item) => (

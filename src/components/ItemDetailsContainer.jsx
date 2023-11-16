@@ -16,21 +16,20 @@ export const ItemDetailsContainer = () => {
         });
         promise
             .then((response) => {
-                const filteres = response.find((item) => item.id == id);
-                setItem(filteres);
+                const filteredItem = response.find((product) => product.id == id);
+                setItem(filteredItem);
             });
     }, [id]);
     if (!item) {
-        return <>loading</>;
+        return <h2>loading</h2>;
     }
     
 
 
     return (
         <div>
-            <h1>{item.title}</h1> 
+            <h2>{item.title}</h2> 
             <img src={item.pictureUrl} />
             <p>{item.descriptiom}</p>
-            </div>
-            );
+        </div>);
 };

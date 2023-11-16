@@ -13,7 +13,7 @@ export const Item = ({ item }) => {
                 <Card.Body className="superior">
                     <Card className="textSup">
                         <Card.Title>{item.title}</Card.Title>
-                    <Link to={`/item/${item}`}> <Button className="botonItem">CHF   {item.price.toFixed(2)}</Button></Link>
+                    <Link to={`/item/${item.id}`}> <Button className="botonItem">CHF   {item.price.toFixed(2)}</Button></Link>
                     </Card>
                     <Card.Text className="textInf">{item.descriptiom}</Card.Text>
                 </Card.Body>
