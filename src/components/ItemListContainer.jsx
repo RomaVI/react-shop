@@ -1,7 +1,5 @@
-export const ItemListCointainer = (props) => {
-    return <h2>{props.greeting}</h2>;
+import { products } from "./data/products";
+const products2 = products;
+export const ItemListCointainer = () => {
+    return <h2>Lista</h2>;
 };
-
-//const greeting = () => {
-//    return <h2>Hola Mundo</h2>;
-//};

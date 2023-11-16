@@ -13,7 +13,8 @@ code {
     monospace;
 }
 
-a {
+a,
+p {
   color: white;
   border: none;
   text-decoration: none;
@@ -31,11 +32,13 @@ h1 {
   font-size: 1rem;
   font-family: 'Segoe Script', cursive;
 }
-h2{
+
+h2 {
   color: white;
   display: flex;
-  margin-left: 15vw; 
+  margin-left: 15vw;
 }
+
 .headerPrincipal {
   display: flex;
   flex-direction: row;
@@ -73,7 +76,7 @@ h2{
       justify-content: center;
       align-items: center;
 
-      background-color: rgba(84, 83, 83, 0.717);
+      background-color: rgba(84, 83, 83, 0.307);
       border-radius: 100%;
       width: 3vw;
       height: 6vh;
@@ -105,6 +108,7 @@ h2{
   margin-left: -20vw;
   width: 19.5vw;
   height: 100vh;
+
   .menuAndLogo {
     display: flex;
     justify-content: space-between;
@@ -132,7 +136,7 @@ h2{
       justify-content: center;
       align-items: center;
 
-      background-color: rgba(84, 83, 83, 0.717);
+      background-color: rgba(84, 83, 83, 0.276);
       border-radius: 100%;
       width: 3vw;
       height: 6vh;
@@ -168,41 +172,53 @@ h2{
       margin-bottom: 5rem;
       list-style: none;
 
-    .liColor{
-      font-size: 1.5rem;
-      margin-right: 2rem;
-      color: rgb(2, 170, 216);
-      cursor: pointer;
-      text-shadow: 0px 0px 1rem rgb(7, 107, 118);
+      .liColor {
+        font-size: 1.4rem;
+        height: 1.5rem;
+        margin-right: 2rem;
+        color: rgb(2, 170, 216);
+        cursor: pointer;
+        text-shadow: 0px 0px 1rem rgb(7, 107, 118);
+
+        .textShadow {
+          filter: 'drop-shadow(0px 0px 1rem rgba(7, 107, 118, 0.8))'
+        }
+      }
+
     }
-    
   }
+
 }
-}
+
 .logo:hover {
   height: 7vh;
   cursor: pointer;
   filter: drop-shadow(0px 5px 10px rgb(6, 116, 199));
 }
-.liEstetic{
+
+.liEstetic {
   display: flex;
   align-items: center;
   padding-left: 1rem;
   width: 14vw;
   height: 2vw;
-  
+
 }
 
-.liEstetic:hover{
-  background-color: rgb(71, 59, 59);
+.liEstetic:hover {
+  background-color: rgba(71, 59, 59, 0.247);
   border-radius: 5px;
   transform: translateX(0.5rem);
 
   transition: transform 0.3s ease;
-  
+
 }
-.liEstetic:active{
-  box-shadow: 0px 0px 1rem white;
+
+.liEstetic:active {
+
+  & a {
+    color: red;
+  }
 }
 
 .headerPlegable.active {
@@ -213,9 +229,10 @@ h2{
 
 #search {
   margin-right: 35vw;
-  width: 30vw;
-  height: 4.5vh;
+  width: 25vw;
+  height: 3.5vh;
   border-radius: 10px;
 
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
 }
