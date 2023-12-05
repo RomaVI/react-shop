@@ -12,7 +12,7 @@ export const ItemDetailsContainer = () => {
         const promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(products);
-            }, 2000);
+            }, 1000);
         });
         promise
             .then((response) => {
@@ -21,15 +21,27 @@ export const ItemDetailsContainer = () => {
             });
     }, [id]);
     if (!item) {
-        return <h2>loading</h2>;
+        return <div className="loading"><ul className="ulloa">
+            <li className="liloa"></li>
+            <li className="liloa"></li>
+            <li className="liloa"></li>
+            <li className="liloa"></li>
+            <li className="liloa"></li>
+        </ul></div>;
     }
-    
+
+
+
+
 
 
     return (
         <div className="itemSBLOQUE">
-            <h2 className="itemSTitle">{item.title}</h2> 
-            <img className="itemSPicture" src={item.pictureUrl} />
-            <p className="ItemSDescription">{item.descriptiom}</p>
+            <img className="itemSPicture" src={item.pictureUrl2} />
+            <div className="subItemSBLOQUE">
+                <h2 className="itemSTitle">{item.title}</h2>
+                <p className="ItemSDescription">{item.descriptiomext}{item.descriptiomsub}</p>
+            </div>
+
         </div>);
 };

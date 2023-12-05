@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
@@ -47,3 +48,15 @@ export const ItemListCointainer = () => {
 };
 
 
+
+const SearchResults = ({ results }) => {
+    return (
+        <ul>
+            {results.map((result, index) => (
+                <li key={index}>{result}</li>
+            ))}
+        </ul>
+    );
+};
+
+export default SearchResults;

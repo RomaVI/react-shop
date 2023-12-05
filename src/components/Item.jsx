@@ -8,14 +8,19 @@ import Card from 'react-bootstrap/Card';
 export const Item = ({ item }) => {
     return (
         <Container className=" blockCont">
-            <Card >
+            <Card className="tamCardBlock">
+                <div className="subCard">
+                <div className="tamCardTitle"><p>NEW ARRIVAL</p></div>
+                <div className="TamCardApuntar"></div>
+                </div>
+                
                 <Card.Img  className="itemImg" variant="top" src={item.pictureUrl} />
-                <Card.Body className="superior">
+                <Card.Body className="cardBody">
                     <Card className="textSup">
                         <Card.Title>{item.title}</Card.Title>
-                    <Link to={`/item/${item.id}`}> <Button className="botonItem">CHF   {item.price.toFixed(2)}</Button></Link>
                     </Card>
                     <Card.Text className="textInf">{item.descriptiom}</Card.Text>
+                    <Link to={`/item/${item.id}`}> <Button className="botonItem">€   {item.price.toFixed(2)}</Button></Link>
                 </Card.Body>
             </Card>
         </Container>

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Container from 'react-bootstrap/Container';
 import { Item } from './Item';
 
