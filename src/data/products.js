@@ -2,6 +2,7 @@ export const products = [
     {
         id: 1,
         title: "Christian Dior",
+        info: "Minivestido floral de lino verde",
         descriptiom: "Elija entre nuestro bolso tote exclusivo online o la bolsa de compra para dar a su pedido el acabado perfecto.",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -14,6 +15,7 @@ export const products = [
     {
         id: 2,
         title: "Louis Vuitton",
+        info: "Minivestido floral de lino verde",
         descriptiom: "Puede incluir un estampado en relieve en distintos bolsos, artículos de equipaje, cinturones.",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -26,6 +28,7 @@ export const products = [
     {
         id: 3,
         title: "Gucci",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -38,6 +41,7 @@ export const products = [
     {
         id: 4,
         title: "Hermès",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -50,6 +54,7 @@ export const products = [
     {
         id: 5,
         title: "Prada",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -62,6 +67,7 @@ export const products = [
     {
         id: 6,
         title: "Saint Laurent",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -74,6 +80,7 @@ export const products = [
     {
         id: 7,
         title: "Prada",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -86,6 +93,7 @@ export const products = [
     {
         id: 8,
         title: "Versace",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo", 
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -98,6 +106,7 @@ export const products = [
     {
         id: 9,
         title: "Christian Dior",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -110,6 +119,7 @@ export const products = [
     {
         id: 10,
         title: "Louis Vuitton",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -122,6 +132,7 @@ export const products = [
     {
         id: 11,
         title: "Gucci",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -134,6 +145,7 @@ export const products = [
     {
         id: 12,
         title: "Hermès",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -146,6 +158,7 @@ export const products = [
     {
         id: 13,
         title: "Prada",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -158,6 +171,7 @@ export const products = [
     {
         id: 14,
         title: "Saint Laurent",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -170,6 +184,7 @@ export const products = [
     {
         id: 15,
         title: "Prada",
+        info: "Minivestido floral de lino verde",
         descriptiom: "muy lindo",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -182,6 +197,7 @@ export const products = [
     {
         id: 16,
         title: "Christian Dior",
+        info: "Minivestido floral de lino verde",
         descriptiom: "Elija entre nuestro bolso tote exclusivo online o la bolsa de compra para dar a su pedido el acabado perfecto.",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",
@@ -194,6 +210,7 @@ export const products = [
     {
         id: 19,
         title: "Christian Dior",
+        info: "Minivestido floral de lino verde",
         descriptiom: "Elija entre nuestro bolso tote exclusivo online o la bolsa de compra para dar a su pedido el acabado perfecto.",
         descriptiomext:"An iconic name within fashion on a global scale, Gucci presents collections that serve as both a reflection of the past and a glimpse into the future. The brand often turns to its own archives, merging details from the past with designs of the present. Historical elements are repainted, reshaped and reimagined to reflect modern times; and each piece is fused with energy.",
         descriptiomsub:"Florence in 1921, Gucci is one of the world’s leading luxury fashion brands, with a renowned reputation for creativity, innovation and Italian craftsmanship",

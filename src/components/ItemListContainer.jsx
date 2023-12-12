@@ -5,13 +5,15 @@ import Container from "react-bootstrap/Container";
 import { products } from "../data/products";
 import { ItemList } from "./ItemList";
 
-export const ItemListCointainer = () => {
+
+export const ItemListContainer = () => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
 
     const { id } = useParams();
+
     useEffect(() => {
-        const promise = new Promise((resolve, reject) => {
+        const promise = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(products);
             }, 1500);
@@ -19,7 +21,7 @@ export const ItemListCointainer = () => {
         promise
             .then((response) => {
                 if (id) {
-                    const filteres = response.filter((item) => item.category == id);
+                    const filteres = response.filter((item) => item.category === id);
                     setItems(filteres);
                 } else {
                     setItems(response);
@@ -27,11 +29,6 @@ export const ItemListCointainer = () => {
             })
             .finally(() => { setLoading(false); });
     }, [id]);
-
-
-
-
-
 
     return (
         <>
@@ -47,3 +44,4 @@ export const ItemListCointainer = () => {
 };
 
 
+export default ItemListContainer;

@@ -1,12 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom"
 
 import { products } from "../data/products";
+import { CartContext } from "../contexts/CartContext";
 
 export const ItemDetailsContainer = () => {
     const [item, setItem] = useState(null);
 
     const { id } = useParams();
+
+    const { addItem} = useContext(CartContext);
     console.log(id);
     useEffect(() => {
         const promise = new Promise((resolve, reject) => {
@@ -42,6 +45,8 @@ export const ItemDetailsContainer = () => {
                 <h2 className="itemSTitle">{item.title}</h2>
                 <p className="ItemSDescription">{item.descriptiomext}{item.descriptiomsub}</p>
             </div>
-
+            <div className="ItemsCarrito">
+                <button onClick={()=> addItem(item) }>Agregar al carrito</button>
+            </div>
         </div>);
 };

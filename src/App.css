@@ -8,14 +8,15 @@
 body {
     margin: 0;
     background-color: #ffffff;
-    overflow-x:hidden ;
+    overflow-x: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-h1{
+
+h1 {
     color: black;
 }
 
@@ -142,9 +143,9 @@ h1{
 
 
 /* NavBar Plegable */
-.activado{
+.activado {
     display: none;
-    
+
 }
 
 .navCont {
@@ -490,9 +491,9 @@ h1{
 }
 
 /* Pag Buscador */
-.pagBusqueda{
+.pagBusqueda {
     padding-top: 4rem;
-   
+
 }
 
 /* Buscador */
@@ -500,10 +501,11 @@ h1{
 #searchQuery:focus {
     outline: none;
 }
-#searchQuery{
+
+#searchQuery {
 
     border: none;
-    
+
     margin-top: 2rem;
     padding-left: 3rem;
     margin-bottom: 4rem;
@@ -513,13 +515,13 @@ h1{
     font-family: 'Smooch Sans', sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    
+
 
     transform: translateX(1rem);
     box-shadow: 0 0 2px 2px rgb(104, 100, 100);
 }
 
-#searchQuery::placeholder{
+#searchQuery::placeholder {
 
     font-size: 4rem;
     text-align: center;
@@ -554,8 +556,178 @@ h1{
 
 
 
+.carrito {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vw;
+
+    height: 200vh;
 
 
+    .carritoSup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        width: 60vw;
+
+        .carritoTitulo {
+            font-family: 'Smooch Sans', sans-serif;
+            font-size: 3rem;
+            letter-spacing: .2rem;
+            font-weight: 700;
+        }
+
+        .clearButton {
+            background-color: black;
+            border: none;
+            color: white;
+            font-family: 'Smooch Sans', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: .15rem;
+
+            width: 16rem;
+            height: 2rem;
+            transition: background-color .5s;
+            /* Agrega la propiedad de transición aquí */
+
+            &:hover {
+                background-color: rgba(97, 96, 96, 0.855);
+            }
+        }
+
+    }
+
+    .carritoMid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60vw;
+        margin-top: 4rem;
+        padding-bottom: .8rem;
+        font-family: 'Smooch Sans', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        border-bottom: 0.1px solid rgb(232, 229, 229);
+
+        .mid2 {
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
+
+            letter-spacing: .1rem;
+            gap: 3.5rem;
+        }
+    }
+ 
+    .carritoDiv {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 60vw;
+        height: 12vw;
+        border-top: 1px solid rgb(232, 229, 229);
+        border-bottom: 1px solid rgb(232, 229, 229);
+        
+        .carritoPictureUrl {
+            height: 7.5rem;
+            width: 6vw;
+            margin: 0;
+            padding: 0;
+        }
+
+        .countInfo{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            height: 7.5rem;
+            margin-left: 1rem;
+            font-family: 'Smooch Sans', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #a8a4a4;
+            letter-spacing: .1rem;
+            
+            .carritoTitle{
+                color: black;
+            }
+        }
+
+
+        .carritoCount {
+
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 1.9rem;
+            padding-left: .5rem;
+            padding-right: .3rem;
+            border: 1px solid black;
+
+        }
+
+        .carritoButton {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 1rem;
+            font-size: 1.3rem;
+            border: none;
+            font-family: 'Smooch Sans', sans-serif;
+            cursor: pointer;
+            background-color: transparent;
+
+            width: 6rem;
+            .remover{
+                font-size: 1.2rem;
+                color: #a8a4a4;
+                margin-right: 1rem;
+                transition: transform .5s ease;
+            }
+            &:hover{
+                .remover{
+                    transform: rotate(45deg);
+                    transition: transform .5s ease;
+                }
+            }
+        }
+        .divBlock{
+
+            width: 20vw;
+            .block1{
+                display: flex;
+                justify-content:  space-around;
+                height: 7.5rem;
+            }
+            .block2{
+
+
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+}
+span{
+    color: black;
+}
+.infoDet{
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    font-size: 1.1rem;
+}
+.carritoEstetic{
+    display: flex;
+    flex-direction: row-reverse;
+}
 @keyframes loading {
 
     0%,
@@ -604,18 +776,3 @@ h1{
 .liloa:nth-child(5) {
     animation-delay: -0.8s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

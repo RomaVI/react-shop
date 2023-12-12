@@ -59,8 +59,9 @@ export const NavBar = () => {
                         </Link>
 
                     <div className="icons">
-
-                        <AiOutlineShopping className="icon" />
+                        <Link to="/Cart">
+                        <AiOutlineShopping className="icon" style={{ color: 'black' }} />
+                        </Link>
                         <Link to="/Busqueda">
                         <RiSearch2Line className="icon" style={{ color: 'black' }} />
                         </Link>
