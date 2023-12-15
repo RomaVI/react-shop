@@ -6,6 +6,7 @@ import { getFirestore, collection, addDoc } from "firebase/firestore"
 import { CartContext } from "../contexts/CartContext";
 import { IoTerminalSharp } from "react-icons/io5";
 
+
 const clearBuyer = { name: "", phone: "", email: "", }
 
 
@@ -19,15 +20,15 @@ export const Cart = () => {
     const hamdleSendOrder = () => {
         const order = { buyer, items, total: 1400, }
 
-        const db = getFirestore;
-
+        
+        const db = getFirestore();
         const orderCollection = collection(db, "orders");
 
         addDoc(orderCollection, order).then(({ id }) => {
             if (id) {
                 alert("Su orden" + id + " ha sido completada!");
             }
-        }).finally(() => setbuyer(clearBuyer, clear));
+        }).finally(() => {setbuyer(clearBuyer); clear();});
     };
 
     const handleChange = (e) => {
@@ -40,22 +41,13 @@ export const Cart = () => {
         });
     };
     if (items.length === 0) {
-        console.log("No funcionó");
         return <Container>
             <div className="noComprasteNada">
                 <p> Desea Comprar algo, revisa nuestro catalogo </p>
             </div>
             </Container>;
     }
-    const decrementCount = () => {
-        if (count > initial) setCount((c) => c - 1);
-    };
-
-    const incrementCount = () => {
-        if (count < stock) setCount((c) => c + 1);
-    };
-    
-
+    const totall = items.reduce((to, item) => to + item.price * item.quantity, 0);
     return (
         <>
             <Container className="container carrito">
@@ -103,7 +95,7 @@ export const Cart = () => {
                 <div className="blockTotal">
                     <div className="total">
                         <p className="textTotal">Subtotal:</p>
-                        <p className="subTotal">€ 7.460,00</p>
+                        <p className="subTotal">€ {totall}</p>
                     </div>
                     <div className="total">
                         <p className="textTotal">Envío gratuito:</p>
@@ -111,7 +103,7 @@ export const Cart = () => {
                     </div>
                     <div className="sumTotal">
                         <p className="sumtxt">Total:</p>
-                        <p className="sum">€ 7.462.00</p>
+                        <p className="sum">€ {totall}</p>
                     </div>
                     <div className="iva">
                         <p className="ivaP">IVA no incluido</p>
@@ -140,7 +132,7 @@ export const Cart = () => {
                         <input type="email" value={buyer.email} onChange={handleChange} required name="email" />
                     </div>
                     <div className="pagar">
-                        <button className="container clearButton" type="button" onClick={hamdleSendOrder}>COMPLETAR EL PAGO</button>
+                        <button className="container clearButton" type="button" onClick={hamdleSendOrder}>PAGAR</button>
 
                     </div>
                 </form>

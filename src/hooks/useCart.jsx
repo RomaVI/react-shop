@@ -16,9 +16,6 @@ export const useCart = () => {
         } else {
             setItems((prev) => [...prev, { ...item, quantity }]);
         }
-
-
-        console.log(items);
     };
 
     const removeItem = (id) => {
