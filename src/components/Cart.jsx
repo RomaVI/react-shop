@@ -1,20 +1,66 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Container from "react-bootstrap/Container";
-
 import { FaTimes } from "react-icons/fa";
+import { getFirestore, collection, addDoc } from "firebase/firestore"
 
 import { CartContext } from "../contexts/CartContext";
+import { IoTerminalSharp } from "react-icons/io5";
+
+const clearBuyer = { name: "", phone: "", email: "", }
 
 
 
 export const Cart = () => {
-    9
-    const { clear, items } = useContext(CartContext);
+    const [buyer, setbuyer] = useState(clearBuyer);
+    const { clear, items, removeItem } = useContext(CartContext);
+    const total = items.reduce((acumulado, actual) => {
+        return acumulado + actual.price
+    }, 0)
+    const hamdleSendOrder = () => {
+        const order = { buyer, items, total: 1400, }
+
+        const db = getFirestore;
+
+        const orderCollection = collection(db, "orders");
+
+        addDoc(orderCollection, order).then(({ id }) => {
+            if (id) {
+                alert("Su orden" + id + " ha sido completada!");
+            }
+        }).finally(() => setbuyer(clearBuyer, clear));
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setbuyer(prev => {
+            return {
+                ...prev,
+                [name]: value,
+            }
+        });
+    };
+    if (items.length === 0) {
+        console.log("No funcionó");
+        return <Container>
+            <div className="noComprasteNada">
+                <p> Desea Comprar algo, revisa nuestro catalogo </p>
+            </div>
+            </Container>;
+    }
+    const decrementCount = () => {
+        if (count > initial) setCount((c) => c - 1);
+    };
+
+    const incrementCount = () => {
+        if (count < stock) setCount((c) => c + 1);
+    };
+    
+
     return (
         <>
             <Container className="container carrito">
                 <div className="carritoSup">
-                    <h3 className="carritoTitulo">Tu cesta de la compra</h3>
+                    <h3 className="carritoTitulo">Carrito de compras</h3>
                     <button className="container clearButton" onClick={clear}>VACIAR LA CESTA</button>
 
                 </div>
@@ -33,17 +79,12 @@ export const Cart = () => {
                         <div className="divBlock">
                             <div className="block1">
                                 <p>€ {item.price}</p>
-                                <input
-                                    type="number"
-                                    min="1"
-                                    max="99"
-                                    className="carritoCount"
-                                    placeholder="1"
-                                />
-                                <p>€ {item.price}</p>
+                                
+                                <p>{item.quantity}</p>
+                                <p>€ {item.price*item.quantity}</p>
                             </div>
                             <div className="block2">
-                                <button className="carritoButton"><FaTimes className="remover"/>Remover </button>
+                                <button className="carritoButton" onClick={() => removeItem(item.id)}><FaTimes className="remover" />Remover </button>
                             </div>
                         </div>
                         <div className="carritoEstetic">
@@ -59,7 +100,50 @@ export const Cart = () => {
                         </div>
                     </div>
                 ))}
+                <div className="blockTotal">
+                    <div className="total">
+                        <p className="textTotal">Subtotal:</p>
+                        <p className="subTotal">€ 7.460,00</p>
+                    </div>
+                    <div className="total">
+                        <p className="textTotal">Envío gratuito:</p>
+                        <p className="subTotal">€ 0,00</p>
+                    </div>
+                    <div className="sumTotal">
+                        <p className="sumtxt">Total:</p>
+                        <p className="sum">€ 7.462.00</p>
+                    </div>
+                    <div className="iva">
+                        <p className="ivaP">IVA no incluido</p>
+                    </div>
+                </div>
+                <div className="pagar">
+                    <button className="container clearButton" >COMPLETAR EL PAGO</button>
+                </div>
+                <form>
+                    <div className="input-group">
+                        <label>
+                            Nombre
+                        </label>
+                        <input type="text" value={buyer.name} onChange={handleChange} required name="name" />
+                    </div>
+                    <div className="input-group">
+                        <label>
+                            Telefono
+                        </label>
+                        <input type="text" value={buyer.phone} onChange={handleChange} required name="phone" />
+                    </div>
+                    <div className="input-group">
+                        <label>
+                            Email
+                        </label>
+                        <input type="email" value={buyer.email} onChange={handleChange} required name="email" />
+                    </div>
+                    <div className="pagar">
+                        <button className="container clearButton" type="button" onClick={hamdleSendOrder}>COMPLETAR EL PAGO</button>
 
+                    </div>
+                </form>
             </Container>
         </>
     );

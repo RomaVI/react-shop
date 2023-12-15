@@ -1,4 +1,4 @@
-import { NavLink, Link} from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import "./Categories.css";
@@ -14,12 +14,12 @@ import { GiClothes } from "react-icons/gi";
 import { GiRamProfile } from "react-icons/gi";
 import { GiDelicatePerfume } from "react-icons/gi";
 
-import { products } from '../data/products';
 
-const category = products.map((item) => item.category);
-const uniqueCategories = new Set(category)
 
-console.log([...uniqueCategories]);
+//const category = products.map((item) => item.category);
+//const uniqueCategories = new Set(category)
+
+//console.log([...uniqueCategories]);
 
 export const NavBar = () => {
     const [active, setActive] = useState(true);
@@ -49,30 +49,29 @@ export const NavBar = () => {
             <header className='headerPrincipal'>
                 <div className="menuAndLogo">
                     <div className="contacto">
-                        <RxCross2 className="cruz" /><p>Póngase en contacto con nosotros</p>
+                        <RxCross2 className="cruz" /><p>Contáctanos</p>
                     </div>
 
-                        <Link to="/">
-                    <div className={`"logoAndTitle ${titleClass}`}>
-                        <h1 >ENKI</h1>
-                    </div>
-                        </Link>
+                    <Link to="/">
+                        <div className={`"logoAndTitle ${titleClass}`}>
+                            <h1 >ENKI</h1>
+                        </div>
+                    </Link>
 
                     <div className="icons">
                         <Link to="/Cart">
-                        <AiOutlineShopping className="icon" style={{ color: 'black' }} />
+                            <AiOutlineShopping className="icon" style={{ color: 'black' }} />
                         </Link>
                         <Link to="/Busqueda">
-                        <RiSearch2Line className="icon" style={{ color: 'black' }} />
+                            <RiSearch2Line className="icon" style={{ color: 'black' }} />
                         </Link>
                         <HiBars3 className="icon" onClick={() => {
                             setActive(!active);
-                            console.log("¡El componente fue clicado!");
                         }} />
                     </div>
                 </div>
             </header>
-                        
+
 
             <header className={`headerPlegable ${active ? 'activado' : ''} `}>
 
@@ -82,7 +81,6 @@ export const NavBar = () => {
 
                         <li><RxCross2 className="liEstetic liColor hibar" onClick={() => {
                             setActive(!active);
-                            console.log("¡El componente fue clicado!");
                         }} /></li>
                         <li>
                             <Link to="/">
@@ -91,7 +89,29 @@ export const NavBar = () => {
                             </Link>
 
                         </li>
-                        {[...uniqueCategories].map((item) => (
+                        <li className='liEstetic'>
+                            <NavLink as={NavLink} key="Ropa de estacion" to='/Categoria/Ropa de estacion'>
+                                <i className={'liColor'}>
+                                    <GiClothes className="car" /> Ropa
+                                </i>
+                            </NavLink>
+                            <NavLink as={NavLink} key="Collar" to='/Categoria/Collar'>
+                                <i className={'liColor'}>
+                                <GiPearlNecklace className={'liColor'} /> Collar
+                                </i>
+                            </NavLink>
+                            <NavLink as={NavLink} key="Lentes" to='/Categoria/Lentes'>
+                                <i className={'liColor'}>
+                                <IoGlasses className="swimmer" /> Lentes
+                                </i>
+                            </NavLink>
+                            <NavLink as={NavLink} key="Perfume" to='/Categoria/Perfume'>
+                                <i className={'liColor'}>
+                                <GiDelicatePerfume className={'liColor'} /> Perfume
+                                </i>
+                            </NavLink>
+                        </li>
+                        {/* {[...uniqueCategories].map((item) => (
                             <li key={item} className='liEstetic'>
                                 <NavLink as={NavLink} to={`/Categoria/${item}`} activeClassName="active">
                                     <i className={'liColor'}>
@@ -104,7 +124,7 @@ export const NavBar = () => {
                                     <h3>{item}</h3>
                                 </NavLink>
                             </li>
-                        ))}
+                        ))} */}
                     </ul>
                 </nav>
             </header>

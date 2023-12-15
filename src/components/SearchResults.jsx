@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 
-import { products } from "../data/products";
+
 import { ItemList } from "./ItemList";
 
 export const ItemListCointainer = () => {

@@ -1,27 +1,25 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom"
+import { getFirestore, getDoc, doc} from "firebase/firestore";
 
-import { products } from "../data/products";
 import { CartContext } from "../contexts/CartContext";
+import ItemCounter from "../components/itemCounter";
 
 export const ItemDetailsContainer = () => {
     const [item, setItem] = useState(null);
 
     const { id } = useParams();
 
-    const { addItem} = useContext(CartContext);
-    console.log(id);
+    const { onAdd } = useContext(CartContext);
+
+
     useEffect(() => {
-        const promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(products);
-            }, 1000);
-        });
-        promise
-            .then((response) => {
-                const filteredItem = response.find((product) => product.id == id);
-                setItem(filteredItem);
-            });
+        const db = getFirestore();
+        const refDoc = doc(db, "items", id);
+
+        getDoc(refDoc).then((snapshot) => {
+            setItem({id: snapshot.id, ...snapshot.data() });
+        })
     }, [id]);
     if (!item) {
         return <div className="loading"><ul className="ulloa">
@@ -35,18 +33,26 @@ export const ItemDetailsContainer = () => {
 
 
 
+    const add = (quantity) => {
+        onAdd(item, quantity);
+
+    }
 
 
-
-    return (
+    return (<>
         <div className="itemSBLOQUE">
             <img className="itemSPicture" src={item.pictureUrl2} />
             <div className="subItemSBLOQUE">
                 <h2 className="itemSTitle">{item.title}</h2>
-                <p className="ItemSDescription">{item.descriptiomext}{item.descriptiomsub}</p>
+                <p className="ItemSDescription">{item.descriptiomext}</p>
+                <p className="ItemSDescription">{item.descriptiomsub}</p>
             </div>
+        </div>
             <div className="ItemsCarrito">
-                <button onClick={()=> addItem(item) }>Agregar al carrito</button>
+    
+                <ItemCounter  initial={1} stock={item.cantidad} onAdd={add}/>
             </div>
-        </div>);
+    </>
+    );
+    
 };

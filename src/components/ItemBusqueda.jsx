@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import { products } from "../data/products";
+import { getFirestore, getDocs, collection, query, where } from "firebase/firestore";
 import { ItemList } from "./ItemList";
 
 const ItemBusqueda = () => {
@@ -14,18 +14,31 @@ const ItemBusqueda = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-
+        const db = getFirestore();
+        
         // Simulando una llamada a una API con un retardo
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
 
-        const response = [...products]; // Haciendo una copia de los productos originales
+        const collectionRef = collection(db, "items");
 
+        // Construir la consulta
+        let queryRef = collectionRef;
         if (id) {
-          const filtered = response.filter((item) => item.category === id);
-          setItems(filtered);
-        } else {
-          setItems(response);
+          // Filtrar por categoría si se proporciona
+          queryRef = query(collectionRef, where("category", "==", id));
         }
+
+        // Obtener los documentos según la consulta
+        const response = await getDocs(queryRef);
+
+        // Filtrar por título si hay un término de búsqueda
+        const filteredItems = response.docs
+          .map((item) => ({ id: item.id, ...item.data() }))
+          .filter((item) =>
+            item.title.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+
+        setItems(filteredItems);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -34,43 +47,25 @@ const ItemBusqueda = () => {
     };
 
     fetchData();
-  }, [id]);
-
-  useEffect(() => {
-    const filterItemsByTitle = () => {
-      if (searchTerm.trim() === "") {
-        // Si el término de búsqueda está vacío, mostrar todos los elementos
-        setItems(products);
-      } else {
-        // Filtrar elementos por título
-        const filteredItems = items.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-        setItems(filteredItems);
-      }
-    };
-
-    filterItemsByTitle();
-  }, [searchTerm, items]); // Elimina 'id' de las dependencias ya que no se utiliza aquí
+  }, [id, searchTerm]);
 
   const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
+    setSearchTerm(e.target.value.toLowerCase()); // Convertir a minúsculas
   };
+  
 
   return (
     <>
       <Container className="container pagBusqueda">
-        
         <div className="titleDoble">
           <input
             type="text"
             id="searchQuery"
-            placeholder="ENKI PRUDUCT"
+            placeholder="Buscar..."
             value={searchTerm}
             onChange={handleSearch}
           />
         </div>
-
         <ItemList items={items} />
       </Container>
     </>
