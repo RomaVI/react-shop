@@ -16,14 +16,9 @@ import { GiDelicatePerfume } from "react-icons/gi";
 
 
 
-//const category = products.map((item) => item.category);
-//const uniqueCategories = new Set(category)
-
-//console.log([...uniqueCategories]);
 
 export const NavBar = () => {
     const [active, setActive] = useState(true);
-    const [activo, setActivo] = useState(true);
     const [scrollPosition, setScrollPosition] = useState(0);
     const location = useLocation();
 
@@ -84,7 +79,6 @@ export const NavBar = () => {
                         }} /></li>
                         <li>
                             <Link to="/">
-                                <i className="liColor"><GiRamProfile className="ini" /></i>
                                 <h3>ENKI</h3>
                             </Link>
 
@@ -92,39 +86,25 @@ export const NavBar = () => {
                         <li className='liEstetic'>
                             <NavLink as={NavLink} key="Ropa de estacion" to='/Categoria/Ropa de estacion'>
                                 <i className={'liColor'}>
-                                    <GiClothes className="car" /> Ropa
+                                    Ropa
                                 </i>
                             </NavLink>
                             <NavLink as={NavLink} key="Collar" to='/Categoria/Collar'>
                                 <i className={'liColor'}>
-                                <GiPearlNecklace className={'liColor'} /> Collar
+                                    Collar
                                 </i>
                             </NavLink>
                             <NavLink as={NavLink} key="Lentes" to='/Categoria/Lentes'>
                                 <i className={'liColor'}>
-                                <IoGlasses className="swimmer" /> Lentes
+                                    Lentes
                                 </i>
                             </NavLink>
                             <NavLink as={NavLink} key="Perfume" to='/Categoria/Perfume'>
                                 <i className={'liColor'}>
-                                <GiDelicatePerfume className={'liColor'} /> Perfume
+                                    Perfume
                                 </i>
                             </NavLink>
                         </li>
-                        {/* {[...uniqueCategories].map((item) => (
-                            <li key={item} className='liEstetic'>
-                                <NavLink as={NavLink} to={`/Categoria/${item}`} activeClassName="active">
-                                    <i className={'liColor'}>
-                                        {item === 'Ropa de estacion' ? <GiClothes className="car" /> :
-                                            item === 'Lentes' ? <IoGlasses className="swimmer" /> :
-                                                item === 'Perfume' ? <GiDelicatePerfume className={'liColor'} /> :
-                                                    <GiPearlNecklace className={'liColor'} />}
-                                    </i>
-
-                                    <h3>{item}</h3>
-                                </NavLink>
-                            </li>
-                        ))} */}
                     </ul>
                 </nav>
             </header>

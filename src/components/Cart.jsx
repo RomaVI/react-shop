@@ -4,7 +4,7 @@ import { FaTimes } from "react-icons/fa";
 import { getFirestore, collection, addDoc } from "firebase/firestore"
 
 import { CartContext } from "../contexts/CartContext";
-import { IoTerminalSharp } from "react-icons/io5";
+
 
 
 const clearBuyer = { name: "", phone: "", email: "", }
@@ -12,11 +12,9 @@ const clearBuyer = { name: "", phone: "", email: "", }
 
 
 export const Cart = () => {
+    const [activo, setActivo] = useState(true);
     const [buyer, setbuyer] = useState(clearBuyer);
     const { clear, items, removeItem } = useContext(CartContext);
-    const total = items.reduce((acumulado, actual) => {
-        return acumulado + actual.price
-    }, 0)
     const hamdleSendOrder = () => {
         const order = { buyer, items, total: 1400, }
 
@@ -84,7 +82,7 @@ export const Cart = () => {
                                 <div className="infoDet">
                                     <h3 className="carritoTitle">{item.title}</h3>
                                     <p className="carritoDescription">{item.info}</p>
-                                    <p> Articulo No.:P00812703 </p>
+                                    <p> Articulo No.:{item.articuloN} </p>
                                 </div>
                                 <p>Tamaño: <span>4 / XL</span></p>
                             </div>
@@ -110,8 +108,11 @@ export const Cart = () => {
                     </div>
                 </div>
                 <div className="pagar">
-                    <button className="container clearButton" >COMPLETAR EL PAGO</button>
+                    <button type="button" className="container clearButton"  onClick={() => {
+                            setActivo(!activo);
+                        }}>COMPLETAR EL PAGO</button>
                 </div>
+                <div  className={`formulario ${activo ? 'formActivo' : ''}`}>
                 <form>
                     <div className="input-group">
                         <label>
@@ -133,9 +134,16 @@ export const Cart = () => {
                     </div>
                     <div className="pagar">
                         <button className="container clearButton" type="button" onClick={hamdleSendOrder}>PAGAR</button>
-
+                    </div>
+                        
+                    <div className="pagar">
+                    <button type="button" className="container clearButton"  onClick={() => {
+                            setActivo(!activo);
+                        }}>RETROCEDER</button>
                     </div>
                 </form>
+                </div>
+                
             </Container>
         </>
     );

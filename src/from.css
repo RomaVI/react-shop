@@ -1,0 +1,30 @@
+.formulario{
+    position: fixed;
+    width: 20vw;
+    min-height: 95vh;
+    border-left: 40vw solid rgba(0, 0, 0, 0);
+    border-right: 40vw solid rgba(0, 0, 0, 0);
+    margin-bottom: 10vh solid trasparent;
+    backdrop-filter: blur(10px);
+    
+    display: flex;
+    justify-content: space-between;
+
+    .input-group{
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+        width: 20vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .pagar{
+        transform: translateX(-20.5vw);
+        margin-top: 40vh;
+        margin-bottom: -17rem;
+    }
+    
+}
+
+.formActivo{
+    transform: translateX(-150vw);
+}
