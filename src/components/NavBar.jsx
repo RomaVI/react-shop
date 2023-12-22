@@ -8,11 +8,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { HiBars3 } from "react-icons/hi2";
 import { RiSearch2Line } from "react-icons/ri";
 import { RxCross2 } from "react-icons/rx";
-import { GiPearlNecklace } from "react-icons/gi";
-import { IoGlasses } from "react-icons/io5";
-import { GiClothes } from "react-icons/gi";
-import { GiRamProfile } from "react-icons/gi";
-import { GiDelicatePerfume } from "react-icons/gi";
+
 
 
 
